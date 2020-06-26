@@ -7,8 +7,11 @@ from sendgrid.helpers.mail import Mail
 
 load_dotenv()
 
+
+
 SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
 MY_EMAIL = os.environ.get("MY_EMAIL_ADDRESS")
+
 
 def send_email(subject="[Daily Briefing] This is a test", html="<p>Hello World</p>"):
     client = SendGridAPIClient(SENDGRID_API_KEY) #> <class 'sendgrid.sendgrid.SendGridAPIClient>
